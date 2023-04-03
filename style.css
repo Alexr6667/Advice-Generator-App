@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --neon-green: hsl(150, 100%, 66%);
+  --light-cyan: hsl(193, 38%, 86%);
+  --greyish-blue: hsl(216, 19%, 38%);
+  --dark-greyish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: var(--dark-blue);
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  width: 540px;
+  background-color: var(--dark-greyish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+  text-align: center;
+}
+
+h1 {
+  color: var(--neon-green);
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 48px 0 24px 0;
+}
+
+h2 {
+  color: var(--light-cyan);
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: -0.3px;
+  padding: 0 48px 40px 48px;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  content: url(./images/pattern-divider-desktop.svg);
+}
+
+.dice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  position: relative;
+  bottom: -32px;
+  border: none;
+}
+
+.dice-button:hover {
+  box-shadow: 0 0 20px 2px var(--neon-green);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 343px;
+  }
+
+  h1 {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.5px;
+    margin: 40px 0 0 0;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 33px;
+    padding: 24px;
+  }
+
+  img {
+    content: url(./images/pattern-divider-mobile.svg);
+    margin-bottom: 0;
+  }
+}
